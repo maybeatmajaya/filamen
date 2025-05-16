@@ -15,15 +15,16 @@ class OverviewStats extends StatsOverviewWidget
     protected function getCards(): array
     {
         return [
-            Card::make('Total Posts', Post::count())
+            Stat::make('Total Posts', Post::count())
                 ->description('Jumlah post di database')
                 ->icon('heroicon-o-document-text')
                 ->color('success'),
 
-            Card::make('Customer Aktif', User::count())
+            Stat::make('Customer Aktif', User::count())
                 ->description('Jumlah user terdaftar')
                 ->icon('heroicon-o-user-group')
                 ->color('info'),
         ];
     }
 }
+
